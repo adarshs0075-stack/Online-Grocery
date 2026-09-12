@@ -1,0 +1,672 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="STYLEsheet" href="{% static 'home/STYLE.css' %}">
+</head>
+<body>
+    <nav>
+        <b href="">Grocery Online</b>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'categories' %}">Categories</a></li>
+            <li><a href="{% url 'track_order' %}">Track Order</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <div class="Search-box">
+            <input type="text" id="search-input" placeholder="Search....">
+            <button type="submit" class="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                </svg>
+            </button>            
+        </div>
+    </nav>
+    <div class="varity">
+        <p>Tasty Organic<br><a>Fruits</a><b> & </b><a>Veggies</a><br>In Your City</p>
+    </div>
+    <div class="feed">
+        <h2>Bred for a high content of beneficial substances.Our</h2>
+        <h2>product are all fresh and healthy</h2>
+    </div>
+    <a href="#categories" class="shop-now-btn">
+        Shop now <span class="pointing-hand">👈</span>
+    </a>
+    <div class="hero-image">
+        <img src="https://i.etsystatic.com/16060308/r/il/4621af/5275607876/il_fullxfull.5275607876_ecsn.jpg">
+    </div>
+    <div class="option" id="categories">
+        <h><span class="shop-text">Shop</span></h>
+        <h><span class="our categories-text">Our Categories</span></h>
+    </div>
+    <div class="main-container">
+        <div class="h-image">
+            <img src="https://c.ndtvimg.com/2023-06/5l4lkmh_fruits-and-vegetables_625x300_26_June_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738">
+            <p1>Fruits & Veggies</p1>
+            <p>Fresh organic produce sourced daily <br>from local farms. Explore a wide range<br> of seasonal fruits and crips vegetables</p>
+            <a href="{% url 'fruits_veggies' %}">
+                <button type="button" class="see-btn">See All</button>
+            </a>
+        </div>
+        <div class="h-image">
+            <img src="https://www.dontpackapest.com/var/ezdemo_site/storage/images/_aliases/large/8/4/8/0/2600848-3-eng-US/meat@1x.jpg" >
+            <p1>Meat & SeaFood</p1>
+            <p>High-quality responsibilty sourced Meat<br>and seafood. Choose from fresh cuts.<br>marinated options, and more.</p>
+            <a href="{% url 'm_s' %}">
+                <button type="button" class="see-btn">See All</button>
+            </a>
+        </div>
+        <div class="h-image">
+            <img src="https://media.istockphoto.com/id/110898455/photo/one-liter-of-fresh-milk-and-two-eggs.jpg?s=612x612&w=0&k=20&c=64guA-XMe_BT_H8gyRsASc5SHGbMT_YpcUkFJkQRzJk=" >
+            <p1>Dairy & Eggs</p1>
+            <p>Wholesome dairy product and free-range<br>eggs. From creamy milk and yogurt<br>to artisanal cheeses</p>
+            <a href="{% url 'd_e' %}">
+                <button type="button" class="see-btn">See All</button>
+            </a>
+
+        
+             
+        </div> 
+    </div>
+    <div class="value">
+        <h><span class="our-text">Our</span></h>
+        <h><span class="value-text">Value</span></h>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+            </div>
+            <p>Trust</p>
+            <h3>We build strong relationship by<br>delivering honest pricing,authentic<br>products and complete transparency<br>in every order</h3>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M420-340h120v-100h100v-120H540v-100H420v100H320v120h100v100Zm60 260q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z"/></svg>
+            </div>
+            <p>Food Safety</p>
+            <h3>Every product goes through strict quality<br>and hygiene checks to ensure maximum<br>freshness and safety for your family.</h3>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q97-30 162-118.5T718-480H480v-315l-240 90v207q0 7 2 18h238v316Z"/></svg>
+            </div>
+            <p>Fast Delivery</p>
+            <h3>Quick processing, secure packaging and<br>on-time delivery so your groceries reach<br>you fresh and hassle-free</h3>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M491-200q12-1 20.5-9.5T520-230q0-14-9-22.5t-23-7.5q-41 3-87-22.5T343-375q-2-11-10.5-18t-19.5-7q-14 0-23 10.5t-6 24.5q17 91 80 130t127 35Zm-239.5 26Q160-268 160-408q0-100 79.5-217.5T480-880q161 137 240.5 254.5T800-408q0 140-91.5 234T480-80q-137 0-228.5-94ZM652-230.5Q720-301 720-408q0-73-60.5-165T480-774Q361-665 300.5-573T240-408q0 107 68 177.5T480-160q104 0 172-70.5ZM480-480Z"/></svg>
+            </div>
+            <p>100% Organic</p>
+            <h3>Naturally grown, chemical-free groceries<br>sourced directly from trusted farms for a<br>healthier lifestyle.</h3>
+        </div>
+    </div>
+    <div class="All-image">
+        <img src="https://png.pngtree.com/png-clipart/20240628/original/pngtree-beautiful-mix-fruits-composition-png-image_15429658.png">
+    </div>
+    <div class="option">
+        <h><span class="our-text">Our</span></h>
+        <h><span class="products-text">Products</span></h>
+    </div>
+    <div class="menu-items">
+        <ul>
+            <a href="javascript:void(0)" class="filter-btn active" data-filter="all" onclick="filterCategory('all')">All</a>
+            <a href="javascript:void(0)" class="filter-btn" data-filter="fruits" onclick="filterCategory('fruits')">Fruits</a>
+            <a href="javascript:void(0)" class="filter-btn" data-filter="vegetables" onclick="filterCategory('vegetables')">Vegetables</a>
+           <a href="javascript:void(0)" class="filter-btn" data-filter="dairy" onclick="filterCategory('dairy')">Dairy</a>
+        </ul>
+    </div>
+    <div class="our-tag">
+        <div class="h-pic" data-category="dairy">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://png.pngtree.com/png-vector/20250724/ourmid/pngtree-makhan-matki-pot-with-butter-splash-krishna-janmashtami-element-png-image_16789171.webp">
+            <h3>Fresh Butter</h3>
+            <h4>₹35.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Fresh Butter', 35.00); openPaymentModal('35.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="dairy">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTHEeLF29Dphl_tnh0s52Lk9ky65TdJih8mM52MZoCQ&s=10">
+            <h3>Paneer</h3>
+            <h4>₹40.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Panner', 40.00); openPaymentModal('40.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="dairy">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://png.pngtree.com/png-clipart/20240619/original/pngtree-a-bottle-in-fresh-splash-milk-png-image_15366664.png">
+            <h3>Milk</h3>
+            <h4>₹33.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Milk', 33.00); openPaymentModal('35.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="dairy">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://ihmnotessite.com/wp-content/uploads/2020/05/CREAM-1.jpg">
+            <h3>Cream</h3>
+            <h4>₹64.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Cream', 64.00); openPaymentModal('64.00');">Buy Now</button>
+        </div>         
+    </div>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQXAJBhZWPyDoR1onjCeUw5lp2k1eRgN3o85YhKMoukplTvFhpkQz2VSk&s=10">
+            <h3>Eggs(Brown)</h3>
+            <h4>₹15.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Eggs(Brown)', 15.00); openPaymentModal('15.00');">Buy Now</button>
+        </div>
+         <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://derafarms.com/cdn/shop/files/deraproducts_12.png?v=1719207103">
+            <h3>Eggs(White)</h3>
+            <h4>₹8.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Eggs(White)', 8.00); openPaymentModal('8.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="fruits">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://www.wegiftkerala.com/wp-content/uploads/2021/09/Banana_with_basket.jpg">
+            <h3>Banana</h3>
+            <h4>₹45.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Banana', 45.00); openPaymentModal('45.00');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/053/382/314/small/burlap-sack-of-white-rice-with-green-leaves-png.png">
+            <h3>Rice</h3>
+            <h4>₹38.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Rice', 38.00); openPaymentModal('38.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="fruits">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://png.pngtree.com/png-vector/20250408/ourmid/pngtree-watermelon-png-image_15963963.png">
+            <h3>Watermelon</h3>
+            <h4>₹54.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Watermelon', 54.00); openPaymentModal('54.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="fruits">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://media.istockphoto.com/id/506627545/photo/cherry-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=xa-4D_CcLiARKWnDKU-blrB0NWHQKpklO7fLswGmbEs=">
+            <h3>Cherry</h3>
+            <h4>₹75.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Cherry', 75.00); openPaymentModal('75.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="fruits">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://rythubandhu.in/wp-content/uploads/2024/10/pomegranate.jpg">
+            <h3>Pomegranate</h3>
+            <h4>₹62.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Pomegranate', 62.00); openPaymentModal('62.00');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/da/cms-assets/cms/product/ce254e5e-5132-4c7c-bbea-1f7d196e6bf8.jpg">
+            <h3>Snacks</h3>
+            <h4>₹10.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Snacks', 10.00); openPaymentModal('10.00');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://urbandelight.in/cdn/shop/files/1_d77e7530-0db9-46bf-97fa-2957d78094e9.jpg?v=1745755613">
+            <h3>Wheat Flour</h3>
+            <h4>₹40.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Wheat Flour', 40.00); openPaymentModal('40.00');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://img.magnific.com/premium-photo/piquant-curry-masala-sauce-isolated-white-background_787273-54153.jpg?semt=ais_hybrid&w=740&q=80">
+            <h3>Masala</h3>
+            <h4>₹60.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Masala', 60.00); openPaymentModal('60.00');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/5/419059708/DO/KQ/GH/51504173/mustard-oil.jpg">
+            <h3>Mustured Oil</h3>
+            <h4>₹180.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Mustured Oil', 180.0); openPaymentModal('180.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://img.magnific.com/free-photo/png-dried-fruits-isolated-white-background_185193-164815.jpg?semt=ais_hybrid&w=740&q=80">
+            <h3>Dry fruits</h3>
+            <h4>₹720.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Dry fruits', 720.0); openPaymentModal('720.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag">
+        <div class="h-pic" data-category="vegetables">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://smartyield.in/wp-content/uploads/2021/06/Big-brinjal-eggplant.png">
+            <h3>Brinjal</h3>
+            <h4>₹35.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Brinjal', 35.00); openPaymentModal('35.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="vegetables">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://media.istockphoto.com/id/499146870/photo/red-onions.jpg?s=612x612&w=0&k=20&c=OaZUynAtxIJyPaSgAsAGWwAbpTs_EfKF5zT_UvBDpbY=">
+            <h3>Onion</h3>
+            <h4>₹40.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Onion', 40.00); openPaymentModal('40.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="vegetables">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://www.producemarketguide.com/media/user_5q6Kv4eMkN/286/garlic_commodity-page.png">
+            <h3>Garlic</h3>
+            <h4>₹33.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Garlic', 33.00); openPaymentModal('35.00');">Buy Now</button>
+        </div>
+        <div class="h-pic" data-category="vegetables">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://hungerstation.dhmedia.io/image/product-information-management/6866a96151a43e92058a22cc.png?width=1440&quality=75&webp=true">
+            <h3>Mushroom</h3>
+            <h4>₹64.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Mushroom', 64.00); openPaymentModal('64.00');">Buy Now</button>
+        </div>         
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://media.istockphoto.com/id/1282866808/photo/fresh-raw-chicken.jpg?s=612x612&w=0&k=20&c=QtfdAhdeIGpR3JUNDmYFo6cN0el8oYMcOXMQI7Qder4=">
+            <h3>Chicken</h3>
+            <h4>₹210.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Chicken', 210.0); openPaymentModal('210.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtRYQtNET2eYEBlOHaAN1tj8CTthSQS10AGvm8HXfltQmMOQY6LBr0SN82&s=10">
+            <h3>Potato</h3>
+            <h4>₹40.00</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Potato', 40.00); openPaymentModal('40.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://www.bbassets.com/media/uploads/p/l/40111311_10-hair-care-non-sticky-hair-oil-for-damage-repair-aloe-vera-olive-oil-green-tea.jpg">
+            <h3>Oil</h3>
+            <h4>₹90.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Oil', 90.0); openPaymentModal('90.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://t3.ftcdn.net/jpg/19/79/60/82/360_F_1979608237_DHaJCncZEMNMAtYS8vLBkYI1txeCKHoe.jpg">
+            <h3>Chocolates</h3>
+            <h4>₹40.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Chocolates', 40.0); openPaymentModal('40.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+         <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://aarkayvaishnodhaba.com/wp-content/uploads/2022/04/cans.webp">
+            <h3>Cold drinks</h3>
+            <h4>₹30.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Cold drinks', 30); openPaymentModal('30.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://thumbs.dreamstime.com/b/sugar-granules-bag-isolated-white-background-burlap-sack-full-crystals-closeup-71659355.jpg">
+            <h3>Sugar</h3>
+            <h4>₹65.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Sugar', 65.0); openPaymentModal('65.0');">Buy Now</button>
+        </div>
+    </div>
+    <div class="our-tag extra-product">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://thumbs.dreamstime.com/b/perspective-sliced-white-bread-loaf-isolated-background-bakery-packaging-product-mockup-view-clean-copy-space-454624364.jpg">
+            <h3>Bread</h3>
+            <h4>₹20.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Bread', 20.0); openPaymentModal('20.0');">Buy Now</button>
+        </div>
+    </div>
+    <button id="viewMoreBtn" type="button" class="view-btn" onclick="toggleMoreProducts()">View More Products</button>
+    <script src="{% static 'home/main.js' %}"></script>
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-card"> 
+
+            <h3>Payment Gateway (Demo)</h3>
+            <p class="amount-text">Total Amount: <strong>₹<span id="payAmount">499</span></strong></p>
+            <div class="input-group">
+                <label for="payMethod">Choose Payment Method:</label>
+                <select id="payMethod">
+                    <option value="upi">UPI (GPay / PhonePe / Paytm)</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button class="pay-btn" onclick="processPayment()">Pay Now</button>
+            <button class="cancel-btn" onclick="closePaymentModal()">Cancel</button>
+        </div>
+    </div>
+    <div class="cart-icon-wrapper" onclick="toggleCartDrawer()">
+    <span class="cart-icon">🛒</span>
+    <span id="cartCount" class="cart-badge">0</span>
+</div>
+<div id="cartOverlay" class="cart-overlay" onclick="toggleCartDrawer()"></div>
+
+<div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+        <h2>Your Shopping Cart</h2>
+        <button class="close-btn" onclick="toggleCartDrawer()">&times;</button>
+    </div>
+
+    <div id="cartItemsList" class="cart-body">
+        <p class="empty-msg">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="total-price-box">
+            <span>Total:</span>
+            <span id="cartTotalPrice">$0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="openPaymentModal(totalPrice)">Proceed to Pay Total Amount</button>
+    </div>
+</div>
+
+<div id="toastContainer" class="toast-container"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Add scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.cat-card, .info-card, .timeline-card').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(40px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+    
+</head>
+<style>
+body {
+    background-color: #121316;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.category-header {
+    text-align: center;
+    margin-top: 100px;
+}
+.category-header h1 {
+    color: #ff3b30;
+    font-size: 2.2rem;
+}
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.cat-card {
+    background: #1a1b1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.cat-card:hover {
+    border-color: #ff3b30;
+    transform: translateY(-5px);
+}
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff3b30;
+    font-weight: bold;
+}
+.back-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.back-home-btn {
+    color: #aaa;
+    text-decoration: none;
+}
+</style>
+<body>
+    <div class="category-header">
+        <h1>Categories - Our Grocery Store</h1>
+        <p>We provide farm-fresh organic vegetables and daily essentials directly to your home.</p>
+    </div>
+    <div class="category-grid">
+        <a href="{% url 'fruits_veggies' %}" class="cat-card">
+            <div class="card-icon">🥦</div>
+            <h3>Fruits & Vegetables</h3>
+            <span class="explore-btn">Browse Products →</span>
+        </a>
+
+        <a href="{% url 'm_s' %}" class="cat-card">
+            <div class="card-icon">🦐</div>
+            <h3>Sea food</h3>
+            <span class="explore-btn">Browse Products →</span>
+        </a>
+
+        <a href="{% url 'd_e' %}" class="cat-card">
+            <div class="card-icon">🧀</div>
+            <h3>Dairy & Essentials</h3>
+            <span class="explore-btn">Browse Products →</span>
+        </a>
+    </div>
+
+    <div class="back-wrapper">
+        <a href="{% url 'home' %}" class="back-home-btn">← Back to Home</a>
+    </div>
+</body>
+</html>

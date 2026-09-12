@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - Grocery Online</title>
+</head>
+<style>
+body {
+    background-color: #121316;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.track-header {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.track-header h1 {
+    color: #ff3b30;
+    font-size: 2.3rem;
+    margin-bottom: 8px;
+}
+
+.track-header p {
+    color: #a1a1aa;
+    font-size: 1rem;
+}
+.track-search-card {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    padding: 0 20px;
+}
+
+.track-form {
+    display: flex;
+    gap: 12px;
+}
+
+.track-form input {
+    flex: 1;
+    padding: 14px 18px;
+    background: #1a1b1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.track-form input:focus {
+    border-color: #ff3b30;
+}
+
+.track-btn {
+    padding: 14px 24px;
+    background-color: #ff3b30;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.track-btn:hover {
+    background-color: #e03126;
+}
+.timeline-card {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    background: #1a1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-summary h4 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.order-summary p {
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 0.85rem;
+}
+
+.est-delivery {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.est-delivery span {
+    color: #a1a1aa;
+    font-size: 0.8rem;
+}
+
+.est-delivery strong {
+    color: #ff3b30;
+    font-size: 0.95rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #27272a;
+    margin: 20px 0;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    opacity: 0.4;
+}
+
+.timeline-step.completed,
+.timeline-step.active {
+    opacity: 1;
+}
+
+.step-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #27272a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.timeline-step.completed .step-icon {
+    background: #22c55e;
+}
+
+.timeline-step.active .step-icon {
+    background: #ff3b30;
+}
+
+.step-content h5 {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 0.85rem;
+}
+.back-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.back-home-btn {
+    color: #aaa;
+    text-decoration: none;
+}
+</style>
+<body class="dark-body">
+
+    <div class="track-header">
+        <h1>Track Your Order</h1>
+        <p>Enter your Order ID to see real-time updates and delivery status.</p>
+    </div>
+    <div class="track-search-card">
+        <form action="#" method="GET" class="track-form">
+            <input type="text" placeholder="Enter Order ID (e.g. #ORD1024)" required>
+            <button type="submit" class="track-btn">Track Status</button>
+        </form>
+    </div>
+    <div class="timeline-card">
+        <div class="order-summary">
+            <div>
+                <h4>Order #ORD1024</h4>
+                <p>Placed on: 12 Sep 2026</p>
+            </div>
+            <div class="est-delivery">
+                <span>Estimated Delivery</span>
+                <strong>Today, 4:30 PM</strong>
+            </div>
+        </div>
+
+        <hr class="divider">
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-content">
+                    <h5>Order Placed</h5>
+                    <p>Your order has been received</p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="timeline-step completed">
+                <div class="step-icon">✓</div>
+                <div class="step-content">
+                    <h5>Packed & Ready</h5>
+                    <p>Items packed from local hub</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="timeline-step active">
+                <div class="step-icon">🚴</div>
+                <div class="step-content">
+                    <h5>Out for Delivery</h5>
+                    <p>Delivery agent is on the way</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="timeline-step">
+                <div class="step-icon">🏠</div>
+                <div class="step-content">
+                    <h5>Delivered</h5>
+                    <p>Pending arrival at destination</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="back-wrapper">
+        <a href="{% url 'home' %}" class="back-home-btn">← Back to Home</a>
+    </div>
+</body>
+</html>

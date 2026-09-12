@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy and Eggs</title>
+    <link rel="STYLEsheet" href="{% static 'home/STYLE.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Dairy and Eggs</h1>
+        <a herf="index.html"></a>
+    </header>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://www.healthyfood.com/wp-content/uploads/2017/03/Guide_to_cheese-1024x851.jpg">
+            <h3>Cheese</h3>
+            <h4>₹110.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Cheese',110.0); openPaymentModal('110.0');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLvsknRJV2B0t5akqfdk5ODqyQacmgAbVdgYK6EImVwsI52h5-Tc8fh0d&s=10">
+            <h3>Yogurt</h3>
+            <h4>₹300</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Yogurt',300); openPaymentModal('300');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://t3.ftcdn.net/jpg/07/00/21/10/360_F_700211000_zeQ9x384CxA6pp2wnjBBOAMCK6aIaXm8.jpg">
+            <h3>Sour Cream</h3>
+            <h4>₹180.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Sour Cream',180.0); openPaymentModal('180.0');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/previews/044/570/761/non_2x/assortment-of-colorful-ice-cream-scoops-in-waffle-cones-with-fresh-fruits-on-a-transparent-background-png.png">
+            <h3>Ice Cream</h3>
+            <h4>₹45</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Ice Cream',45); openPaymentModal('45');">Buy Now</button>
+        </div>         
+    </div>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/065/855/232/small_2x/swirl-of-creamy-smooth-whipped-cream-is-artfully-arranged-soft-peak-showcasing-its-fluffy-texture-and-inviting-appearance-white-airy-dessert-topping-is-perfect-for-adding-touch-of-sweetness-png.png">
+            <h3>Whipped Cream</h3>
+            <h4>₹210.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Whipped Cream', 210.0); openPaymentModal('210.0');">Buy Now</button>
+        </div>
+         <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://highlandfarms.in/cdn/shop/files/a2-cow-buttermilk-highland-farms-500ml-glass-bottle.webp?v=1775307621">
+            <h3>Buttermilk</h3>
+            <h4>₹60.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Buttermilk', 60.0); openPaymentModal('60.0');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://thumbs.dreamstime.com/b/cottage-cheese-curds-whey-wooden-bowl-fresh-curd-product-also-known-as-mild-flavor-cream-added-to-grains-191177850.jpg">
+            <h3>Whey</h3>
+            <h4>₹90.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Whey', 90.0); openPaymentModal('90.0');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://www.dial4trade.com/uploaded_files/product_images/cow-ghee-u-1191565325332551953.webp">
+            <h3>Ghee</h3>
+            <h4>₹80.0</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Ghee', 80.0); openPaymentModal(80.0);">Buy Now</button>
+        </div>
+    </div>
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-card"> 
+
+            <h3>Payment Gateway (Demo)</h3>
+            <p class="amount-text">Total Amount: <strong>₹<span id="payAmount">499</span></strong></p>
+            <div class="input-group">
+                <label for="payMethod">Choose Payment Method:</label>
+                <select id="payMethod">
+                    <option value="upi">UPI (GPay / PhonePe / Paytm)</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button class="pay-btn" onclick="processPayment()">Pay Now</button>
+            <button class="cancel-btn" onclick="closePaymentModal()">Cancel</button>
+        </div>
+    </div>
+    <div class="cart-icon-wrapper" onclick="toggleCartDrawer()">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCartDrawer()"></div>
+
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Shopping Cart</h2>
+            <button class="close-btn" onclick="toggleCartDrawer()">&times;</button>
+        </div>
+
+        <div id="cartItemsList" class="cart-body">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-price-box">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="openPaymentModal(totalPrice)">Proceed to Pay Total Amount</button>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="{% static 'home/main.js' %}"></script>
+    
+</body>
+</html>

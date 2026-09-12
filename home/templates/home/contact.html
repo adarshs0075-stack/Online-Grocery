@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Grocery Online</title>
+</head>
+<style>
+body {
+    background-color: #121316;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.contact-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+.contact-header h1 {
+    color: #ff3b30;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+.contact-header p {
+    color: #a1a1aa;
+    font-size: 1rem;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    background: #1a1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-icon {
+    font-size: 2rem;
+    background: rgba(255, 59, 48, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-card h4 {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.info-card p {
+    margin: 0;
+    color: #a1a1aa;
+    font-size: 0.9rem;
+}
+.contact-form-card {
+    flex: 1.2;
+    min-width: 300px;
+    background: #1a1b1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d4d4d8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: #121316;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #ff3b30;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e03126;
+}
+.back-wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.back-home-btn {
+    color: #aaa;
+    text-decoration: none;
+}
+</style>
+<body class="dark-body">
+    <div class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>Have questions, feedback, or need help with your order? Send us a message!</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div>
+                    <h4>Our Location</h4>
+                    <p>123 Fresh Market Street, Tech City, India</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div>
+                    <h4>Phone Number</h4>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">✉️</div>
+                <div>
+                    <h4>Email Address</h4>
+                    <p>support@groceryonline.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">⏰</div>
+                <div>
+                    <h4>Working Hours</h4>
+                    <p>Mon - Sun: 7:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-card">
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="back-wrapper">
+        <a href="{% url 'home' %}" class="back-home-btn">← Back to Home</a>
+    </div>
+</body>
+</html>
+
+
+

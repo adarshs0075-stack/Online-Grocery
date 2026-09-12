@@ -1,0 +1,201 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat & SeaFood</title>
+    <link rel="STYLEsheet" href="{% static 'home/STYLE.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Meat & SeaFood</h1>
+        <a herf="index.html"></a>
+    </header>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://www.agipress.it/wp-content/uploads/2025/12/istockphoto-1438227465-612x612-1.jpg">
+            <h3>Lobster</h3>
+            <h4>₹400</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Lobster',400); openPaymentModal('400');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>                
+            </div>
+            <img src="https://thumbs.dreamstime.com/b/african-catfish-isolated-white-backgound-80216069.jpg">
+            <h3>Catfish</h3>
+            <h4>₹280</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Catfish',280); openPaymentModal('280');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQgh9sS6Y4Hla8cp969bgyI0cgcAz0Prq9j1qkAR-7V2rIh0jYv0sVcyRQ&s=10">
+            <h3>Oyster</h3>
+            <h4>₹190</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Oyster',190); openPaymentModal('190');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://chefsmandala.com/wp-content/uploads/2018/03/Crab.jpg">
+            <h3>Crab</h3>
+            <h4>₹400</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Crab',400); openPaymentModal('400');">Buy Now</button>
+        </div>         
+    </div>
+    <div class="our-tag">
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/076/339/297/small/single-raw-tiger-prawn-with-long-antennae-isolated-background-free-png.png">
+            <h3>Prawn</h3>
+            <h4>₹380</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Prawn', 380); openPaymentModal('380');">Buy Now</button>
+        </div>
+         <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl1K_K8KJD-Pl-iS8EF6rxmkcESJuNi-r9-Kq-Ndlz65ssYQ2Q2_Wl7kg&s=10">
+            <h3>Whitefish</h3>
+            <h4>₹300</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Whitefish', 300); openPaymentModal('300');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://media.istockphoto.com/id/842811076/photo/empty-seashell-from-oyster.jpg?s=612x612&w=0&k=20&c=55eeAUlw-_qLDTnTtksCO-MWwG-adN8K_hM-O2EN8Bw=">
+            <h3>Oyster</h3>
+            <h4>₹430</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Oyster', 430); openPaymentModal('430');">Buy Now</button>
+        </div>
+        <div class="h-pic">
+            <div class="tag">
+                <svg class="add-to-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
+                </svg>
+                <svg class="remove-from-cart-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+                <svg class="like-btn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                    <path d="m480-120-58-52q-101-91-167-157T150-447.5Q120-500 120-558q0-101 69.5-170.5T360-799q52 0 99 22t81 60q34-38 81-60t99-22q101 0 170.5 69.5T960-558q0 58-30 110.5T805-329q-66 66-167 157l-58 52Z"/>
+                </svg>
+            </div>
+            <img src="https://www.shutterstock.com/image-photo/large-octopus-tentacles-spread-isolated-600nw-2719892495.jpg">
+            <h3>Octopus</h3>
+            <h4>₹460</h4>
+            <button type="button" class="buy-btn" onclick="addToCart('Octopus', 460); openPaymentModal('460');">Buy Now</button>
+        </div>
+    </div>
+    <div id="paymentModal" class="modal-overlay">
+        <div class="modal-card"> 
+
+            <h3>Payment Gateway (Demo)</h3>
+            <p class="amount-text">Total Amount: <strong>₹<span id="payAmount">499</span></strong></p>
+            <div class="input-group">
+                <label for="payMethod">Choose Payment Method:</label>
+                <select id="payMethod">
+                    <option value="upi">UPI (GPay / PhonePe / Paytm)</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button class="pay-btn" onclick="processPayment()">Pay Now</button>
+            <button class="cancel-btn" onclick="closePaymentModal()">Cancel</button>
+        </div>
+    </div>
+    <div class="cart-icon-wrapper" onclick="toggleCartDrawer()">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCount" class="cart-badge">0</span>
+    </div>
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCartDrawer()"></div>
+
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Shopping Cart</h2>
+            <button class="close-btn" onclick="toggleCartDrawer()">&times;</button>
+        </div>
+
+        <div id="cartItemsList" class="cart-body">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-price-box">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="openPaymentModal(totalPrice)">Proceed to Pay Total Amount</button>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="{% static 'home/main.js' %}"></script>
+    
+</body>
+</html>
